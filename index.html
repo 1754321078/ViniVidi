@@ -43,37 +43,35 @@
              <h2>Super Value Deals</h2>
              <h1>On All Products</h1>
              <p>Save More with coupons & up to 70% off!</p>
-             <button onclick="window.location.href='shop.html';">Shop Now</button>
+             <button onclick="window.location.href='shop.html';">Shop Now</button> 
+             
            </section> 
-	    <button id="showInterstitialAdButton">Click Here</button>
-    <script>
-        var pubid = '4192065406729318';
-        var adUnitId = 'ca-app-pub-4192065406729318/8195466088';
+	   <button id="showInterstitialAdButton">Click Here</button>
+           <script>
+var pubid = '4192065406729318';
+var adUnitId = 'ca-app-pub-4192065406729318/8195466088';
 
-        // Load the AdMob SDK script
-        var script = document.createElement('script');
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-        script.async = true;
-        document.head.appendChild(script);
-
-        script.onload = function() {
-            // Initialize AdMob after the script is loaded
-            (adsbygoogle = window.adsbygoogle || []).push({
-                params: { google_ad_client: pubid },
-            });
-
-            // Load the interstitial ad
-            var interstitial = (adsbygoogle = window.adsbygoogle || []).push({
-                params: { google_ad_slot: adUnitId },
-                enable_single_request: true
-            });
-
-            // Event listener to show the ad when the button is clicked
-            document.getElementById('showInterstitialAdButton').addEventListener('click', function() {
-                interstitial.show();
-            });
-        };
-    </script>
+ // Load the AdMob SDK script
+var script = document.createElement('script');
+script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+script.async = true;
+document.head.appendChild(script);
+script.onload = function() {
+// Initialize AdMob after the script is loaded
+(adsbygoogle = window.adsbygoogle || []).push({
+params: { google_ad_client: pubid },
+});
+// Load the interstitial ad
+var interstitial = (adsbygoogle = window.adsbygoogle || []).push({
+params: { google_ad_slot: adUnitId },
+enable_single_request: true
+});
+// Event listener to show the ad when the button is clicked
+document.getElementById('showInterstitialAdButton').addEventListener('click', function() {
+interstitial.show();
+});
+};
+</script>
             <section id="feature" class="s-1">
          <div class="a">
             <img src="img/features/f1.png" alt="">
