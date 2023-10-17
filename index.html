@@ -10,6 +10,28 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         
         <link rel="stylesheet" href="style.css">
+	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        // Replace 'YOUR_ADMOB_APP_ID' with your actual AdMob App ID
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.push({ google_ad_client: 'ca-app-pub-4192065406729318' });
+    </script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    
+    <link type="text/css" href="css/tabs-1.css" rel="stylesheet />
+    <script src="jquery.tools.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul.tabs").tabs("div.panes > div");
+        });
+    </script>
+
     </head>
 
     <body>
@@ -72,26 +94,21 @@
         </div>
        
             </section>
-  <head>
-  <style>
-            table, th, td {
-                border: 1px solid black;
-            }
-        </style>
-    <link type="text/css" href="css/tabs-1.css" rel="stylesheet" />   
-    <script src="jquery.tools.min.js"></script>
+	    <script>
+        function loadAndDisplayInterstitial() {
+            // Use your interstitial ad unit ID
+            var adUnitId = 'ca-app-pub-4192065406729318/8195466088';
+            var interstitialAd = new google.adsbygoogle.ads.interstitial.InterstitialAd(adUnitId);
 
-    <script type="text/javascript"> 
-      $(document).ready(function(){
-      	$("ul.tabs").tabs("div.panes > div");
-	    });
-	</script>
-  </head>
-    <body>
-     
-      
-	    
-		  
+            // Load the interstitial ad
+            interstitialAd.load();
+
+            // Show the interstitial ad when it's ready
+            interstitialAd.on('load', function() {
+                interstitialAd.show();
+            });
+        }
+    </script>
 <section id="pd-1" class="s-2">
  <h2>Featured Products</h2>
  <p>Summer Collections With ViniVidi Modern Designs</p>
