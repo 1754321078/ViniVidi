@@ -10,29 +10,7 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         
         <link rel="stylesheet" href="style.css">
-	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        // Replace 'YOUR_ADMOB_APP_ID' with your actual AdMob App ID
-        window.adsbygoogle = window.adsbygoogle || [];
-        window.adsbygoogle.push({ google_ad_client: 'ca-app-pub-4192065406729318' });
-    </script>
-
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
-    
-    <link type="text/css" href="css/tabs-1.css" rel="stylesheet />
-    <script src="jquery.tools.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("ul.tabs").tabs("div.panes > div");
-        });
-    </script>
-
-    </head>
+	  </head>
 
     <body>
         <section id="header">
@@ -94,20 +72,36 @@
         </div>
        
             </section>
-	    <script>
-        function loadAndDisplayInterstitial() {
-            // Use your interstitial ad unit ID
-            var adUnitId = 'ca-app-pub-4192065406729318/8195466088';
-            var interstitialAd = new google.adsbygoogle.ads.interstitial.InterstitialAd(adUnitId);
+	   <button id="showInterstitialAdButton">Show Interstitial Ad</button>
+
+    <!-- Include your script for AdMob -->
+    <script>
+        var pubid = '4192065406729318';
+        var adUnitId = 'ca-app-pub-4192065406729318/8195466088';
+
+        // Load the AdMob SDK script
+        var script = document.createElement('script');
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+        script.async = true;
+        document.head.appendChild(script);
+
+        script.onload = function() {
+            // Initialize AdMob after the script is loaded
+            (adsbygoogle = window.adsbygoogle || []).push({
+                params: { google_ad_client: pubid },
+            });
 
             // Load the interstitial ad
-            interstitialAd.load();
-
-            // Show the interstitial ad when it's ready
-            interstitialAd.on('load', function() {
-                interstitialAd.show();
+            var interstitial = (adsbygoogle = window.adsbygoogle || []).push({
+                params: { google_ad_slot: adUnitId },
+                enable_single_request: true
             });
-        }
+
+            // Event listener to show the ad when the button is clicked
+            document.getElementById('showInterstitialAdButton').addEventListener('click', function() {
+                interstitial.show();
+            });
+        };
     </script>
 <section id="pd-1" class="s-2">
  <h2>Featured Products</h2>
